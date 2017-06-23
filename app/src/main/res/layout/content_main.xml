@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tk.appstart.start.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="0dp"
+                android:background="@drawable/banner" />
+
+            <Button
+                android:id="@+id/btConteudo1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorCinzaLeve"
+                android:drawableLeft="@drawable/logica"
+                android:onClick="btConteudo1"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="@string/item_1"
+                android:textAllCaps="false"
+                android:textColor="@color/azulMedio"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btConteudo2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorCinzaLeve"
+                android:drawableLeft="@drawable/tipodados"
+                android:onClick="btConteudo2"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="@string/item_2"
+                android:textAllCaps="false"
+                android:textColor="@color/azulMedio"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btConteudo3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorCinzaLeve"
+                android:drawableLeft="@drawable/operadores"
+                android:onClick="btConteudo3"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="@string/item_3"
+                android:textAllCaps="false"
+                android:textColor="@color/azulMedio"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btConteudo4"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorCinzaLeve"
+                android:drawableLeft="@drawable/condicionais"
+                android:onClick="btConteudo4"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="@string/item_4"
+                android:textAllCaps="false"
+                android:textColor="@color/azulMedio"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btConteudo5"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorCinzaLeve"
+                android:drawableLeft="@drawable/loop"
+                android:onClick="btConteudo5"
+                android:paddingBottom="3dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="3dp"
+                android:text="@string/item_5"
+                android:textAllCaps="false"
+                android:textColor="@color/azulMedio"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

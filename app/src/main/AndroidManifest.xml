@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tk.appstart.start">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="tk.appstart.start.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="tk.appstart.start.Assunto1Activity"
+            android:label="@string/item_1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.appstart.start.Assunto2Activity"
+            android:label="@string/item_2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.appstart.start.Assunto3Activity"
+            android:label="@string/item_3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.appstart.start.Assunto4Activity"
+            android:label="@string/item_4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.appstart.start.Assunto5Activity"
+            android:label="@string/item_5"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.appstart.start.SobreActivity"
+            android:label="@string/title_activity_sobre"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="tk.appstart.start.ReferenciasActivity"
+            android:label="@string/referencias"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio1Activity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio2Activity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio3Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio4Activity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio5Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio6Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio7Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio8Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio9Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name="tk.appstart.game.Desafio10Activity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="locked"></activity>
+
+    </application>
+
+</manifest>

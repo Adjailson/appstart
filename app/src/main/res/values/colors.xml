@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorSegundaria">#3bc4ff</color>
+    <color name="colorPrimary">#0ba2f9</color>
+    <color name="colorPrimaryDark">#4071cc</color>
+    <color name="colorTexto">#222222</color>
+
+    <color name="azulClaro">#2e9ef1</color>
+    <color name="azulMedio">#107ac6</color>
+    <color name="azulEscuro">#006dbd</color>
+    <color name="azulFuncoes">#303F9F</color>
+
+    <color name="colorCinza">#aea9a9</color>
+    <color name="colorCinzaLeve">#e6e1e1</color>
+    <color name="colorBranco">#FFFFFF</color>
+    <color name="colorVerde">#1a8018</color>
+    <color name="colorRoxo">#a61a98</color>
+    <color name="colorVermelho">#f93f48</color>
+    <color name="colorLaranja">#f9893f</color>
+
+    <color name="colorPreta">#201f1f</color>
+    <color name="colorIde">#f2eded</color>
+    <color name="transparent">#00ffffff</color>
+
+</resources>

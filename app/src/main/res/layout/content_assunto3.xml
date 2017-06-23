@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tk.appstart.start.Assunto2Activity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/azulEscuro"
+                android:text="@string/operadores"/>
+
+
+            <!--área operadores aritmétricos-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:textSize="18dp"
+                        android:textColor="@color/colorBranco"
+                        android:text="@string/operadores_arit"
+                        android:background="@drawable/estilo_barra"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:padding="6dip" />
+
+                </TableRow>
+
+                <TableRow
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/soma"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/subtracao"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/multiplicacao"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/divisao"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/divisao_int"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/potenciacao"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="\nExemplo em Pyhton:"/>
+
+            <TextView
+                android:id="@+id/exemplo_operadores_arit"
+                android:layout_width="match_parent"
+                android:textSize="17dp"
+                android:textColor="@color/colorTexto"
+                android:typeface="monospace"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+
+            <!--área do operadores lógicos-->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:stretchColumns="0">
+
+                <TableRow
+                    >
+                    <TextView
+                        android:textSize="18dp"
+                        android:textColor="@color/colorBranco"
+                        android:text="@string/operadores_logi"
+                        android:background="@drawable/estilo_barra"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:padding="6dip" />
+
+                </TableRow>
+
+                <TableRow
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/maior"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/menor_que"
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/menor"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/maior_igual"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/menor_igual"
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/menor_igual"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:text="@string/igual"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/atribuicao"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/diferenca"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/negacao"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/and"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:textSize="20dp"
+                        android:background="@drawable/estilo_table"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="@string/or"
+                        android:gravity="center"
+                        android:padding="4dip" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="\nExemplo em Python:"/>
+
+            <TextView
+                android:id="@+id/exemplo_operadores_logi"
+                android:layout_width="match_parent"
+                android:textSize="17dp"
+                android:textColor="@color/colorTexto"
+                android:typeface="monospace"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/estilo_botao"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:textColor="@color/colorBranco"
+                android:layout_gravity="right"
+                android:onClick="exercicioAssunto3"
+                android:textAllCaps="false"
+                android:text="@string/praticar"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

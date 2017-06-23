@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tk.appstart.start.ReferenciasActivity"
+    tools:showIn="@layout/activity_referencias">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:paddingBottom="50dp">
+
+            <!--Site do code-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="A Hora do Código:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkCode"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkCode"/>
+
+            <!--Site do codecademy-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Aprenda a Programar:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkCodecademy"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkCodecademy"/>
+
+            <!--Site do Lightbot-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Lógica de Programação:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkLigtbot"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkLightbot"/>
+
+            <!--Site do Scratch-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Imagine, Program, Share:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkScratch"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkScratch"/>
+
+            <!--Site do Robocode-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Robocode - Construa o melhor, destrua o resto!:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkRobocode"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkRobocode"/>
+
+            <!--Site do Khan Academy-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Khan Academy - Computação:"
+                android:textColor="@color/colorTexto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/azulMedio"
+                android:text="@string/linkKhanAcademy"
+                android:textStyle="bold|italic"
+                android:textSize="18dp"
+                android:onClick="linkKhan"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

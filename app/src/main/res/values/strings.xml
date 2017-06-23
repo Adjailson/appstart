@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Start</string>
+    <string name="action_config">Resetar fases</string>
+    <string name="action_ref">Referências</string>
+    <string name="action_sobre">Sobre-nós</string>
+
+    <string name="item_1">\tLógica de Programação</string>
+    <string name="item_2">\tTipos de Dados</string>
+    <string name="item_3">\tOperadores</string>
+    <string name="item_4">\tCondicionais</string>
+    <string name="item_5">\tLoops</string>
+
+    <string name="praticar">Exercício</string>
+
+    <string name="algoritmo">Algoritmo</string>
+    <string name="logica">Lógica</string>
+    <string name="variaveis">Variáveis</string>
+    <string name="tipos_dados">Tipos de dados</string>
+    <string name="operadores">Operadores</string>
+    <string name="condicionais">Condicionais</string>
+    <string name="usando_python">Python</string>
+    <string name="operadores_arit">Aritmétricos</string>
+    <string name="operadores_logi">Lógicos</string>
+
+    <string name="sobre_logica">Lógica de Programação pode ser descrita como uma técnica para o desenvolvimento de Algoritmo.\n</string>
+    <string name="textoAlgo">É a descrição passo a passo ordenada de forma lógica e finita cujo objetivo
+    e realizar uma tarefa.\n\nExemplo de Algoritmo escrito\n\nSoma 10 + 5\n</string>
+    <string name="exemplo_algoritmo">1º - Pega o primeiro número Dez\n2º - Pega o segundo número
+     Cinco\n3º - Soma o primeiro número com o segundo número\n4º - Obtém-se o resultado da soma</string>
+    <string name="exemplo_fluxograma">\nExemplo Fluxograma\nSoma 10 + 5</string>
+    <string name="sobre_variaveis">Objetos que são atribuídos à memória do computador. Esses objetos
+    pode ser números ou letras.\n\nExemplo guardando objetos\n\nSubtração de 10 - 3:\n</string>
+    <string name="sobre_python">é uma Linguagem de Programação que utilizaremos para escrever nossos Algoritmos.\n\nExemplo:</string>
+    <string name="sobre_condicionais">São desvios na execução do algoritmo devido a uma condição específica.\n</string>
+    <string name="sobre_cond_python">Na linguagem Python usamos <b>if</b> e <b>else</b>. Exemplo: </string>
+
+    <string name="sobre_aspas">Quando usamos valores ou texto entre aspas duplas, tudo é considerado como texto ou String.\n\nExemplo em Python:</string>
+    <string name="sobre_parentese">No cálculo da média colocamos os valores em parêntese para que primeiro calcule à soma e depois faz a divisão dessa soma.</string>
+
+    <string name="exemplo_strings">\"Maria\", \"1.5\", \"4\", \"Olá!\"</string>
+
+    <string name="soma">Soma <b>+</b></string>
+    <string name="subtracao">Subtração <b>-</b></string>
+    <string name="multiplicacao">Multiplicação <b>*</b></string>
+    <string name="divisao">Divisão <b>/</b></string>
+    <string name="divisao_int">Divisão de inteiros <b>//</b></string>
+    <string name="potenciacao">Potenciação <b>**</b></string>
+    <string name="exemplo_codigo_python">Exemplo em Python:</string>
+
+    <string name="menor"> <b> </b> Menor que</string>
+    <string name="maior"> <b> >= </b> Maior que</string>
+    <string name="maior_igual"> <b> >= </b> Maior igual</string>
+    <string name="menor_igual"> <b> </b> Menor igual</string>
+    <string name="igual"> <b>==</b> Igual</string>
+    <string name="atribuicao"> <b>=</b> Atribuição</string>
+    <string name="diferenca"> <b>!=</b> Diferença</string>
+    <string name="negacao"> <b>not</b> Negação</string>
+    <string name="and"> <b>and</b> Ambas verdadeiras</string>
+    <string name="or"> <b>or</b> Uma verdade</string>
+
+    <string name="tituloLoops">Loops</string>
+    <string name="sobre_loops">O loop é uma estrutura de repetição mais simples. Ele repete a execução de um bloco de sentenças enquanto uma condição permanecer verdadeira.</string>
+    <string name="sobre_loop_mais">Na primeira vez que a condição se tornar falsa, o loop não repetirá a execução do bloco, e a execução continuará com a sentença ou comando que vem logo após o bloco do loop, na seqüência do programa.</string>
+    <string name="exemplo_loop_python">\nNa linguagem Python usaremos o <b>while</b></string>
+    <string name="tituloFuncoes">Funções</string>
+
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="sobre_nos"><b>Start</b> é um aplicativo, desenvolvido por alunos do curso de Licenciatura em Computação da Universidade de Pernambuco Campus Garanhuns, tem como objetivo levar os conhecimentos iniciais sobre Programação de Computadores aos estudantes a partir do ensino médio.</string>
+    <string name="sobre_app">O App</string>
+    <string name="sobre_equipe">Equipe</string>
+    <string name="nome_Adjailson">Adjailson Ferreira de Melo</string>
+    <string name="cargo_Adjailson">Coordenação, Pesquisa e Programação</string>
+    <string name="cargo_Luiz_e_Rafa">Pesquisa e Programação</string>
+    <string name="cargo_Sergio">Design e Pesquisa</string>
+    <string name="nome_Luiz">Luiz Tiago Bezerra de Souza</string>
+    <string name="nome_Rafael">Rafael Paulo da Silva</string>
+    <string name="nome_Sergio">Sérgio Teles da Silva</string>
+    <string name="referencias">Referências</string>
+
+    <string name="linkCode"><u>https://code.org/</u></string>
+    <string name="linkCodecademy"><u>https://www.codecademy.com/</u></string>
+    <string name="linkLigtbot"><u>https://lightbot.com/</u></string>
+    <string name="linkScratch"><u>https://scratch.mit.edu/</u></string>
+    <string name="linkRobocode"><u>http://robocode.sourceforge.net/</u></string>
+    <string name="linkKhanAcademy"><u>https://pt.khanacademy.org/computing</u></string>
+    <string name="txt_exemplo">Exemplo: Média das notas 8 e 6</string>
+
+</resources>
