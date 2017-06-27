@@ -34,6 +34,9 @@ public class Assunto4Activity extends AppCompatActivity {
         TextView txtCodigo = (TextView) findViewById(R.id.codigo_if_else);
         txtCodigo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_condicional.html")));
 
+        TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_condicional);
+        exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_condicional2.html")));
+
         startAnimacao();
 
     }

@@ -3,9 +3,11 @@ package tk.appstart.start;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -27,6 +29,10 @@ public class Assunto5Activity extends AppCompatActivity {
         imgLoop = (ImageView) findViewById(R.id.exemplo_loop);
 
         startAnimacao();
+
+        TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_loop);
+        exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_python_loop.html")));
+
     }
 
     /**
@@ -68,5 +74,6 @@ public class Assunto5Activity extends AppCompatActivity {
     public void exercicioAssunto5(View view){
 
     }
+
 
 }
