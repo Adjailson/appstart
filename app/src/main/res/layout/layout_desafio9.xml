@@ -35,7 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="13dp"
         android:layout_marginTop="5dp"
-        android:background="@color/colorIde"
         android:orientation="horizontal">
 
         <TextView

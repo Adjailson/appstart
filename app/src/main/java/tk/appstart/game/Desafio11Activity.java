@@ -18,6 +18,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import tk.appstart.start.BancoControle;
 import tk.appstart.start.MensagemDialog;
 import tk.appstart.start.R;
 import tk.appstart.start.ValidaVariavel;
@@ -169,6 +170,8 @@ public class Desafio11Activity extends AppCompatActivity {
         } else if (txtBotao.equals("Recarregar")) {
             resetar();
         } else if (txtBotao.equals("Próximo")) {
+            BancoControle controle = new BancoControle(this);
+            controle.salvarPontuacao(5,3);
             this.finish();
         }
     }

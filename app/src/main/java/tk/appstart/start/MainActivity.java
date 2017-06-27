@@ -9,8 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import tk.appstart.game.Desafio11Activity;
-
 public class MainActivity extends AppCompatActivity {
 
     BancoControle controle = new BancoControle(this);
@@ -72,8 +70,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void btConteudo5(View view) {
-        //startActivity(new Intent(this, Assunto5Activity.class));
-        startActivity(new Intent(this, Desafio11Activity.class));
+        if(getPontos(4) == 3) {
+            startActivity(new Intent(this, Assunto5Activity.class));
+            //startActivity(new Intent(this, Desafio11Activity.class));
+        }else{
+            MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
+        }
     }
     /**
      * Os métodos abaixo são adição de opção para um menu superior

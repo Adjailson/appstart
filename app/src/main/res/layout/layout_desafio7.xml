@@ -24,7 +24,7 @@
             android:id="@+id/table_minimundo"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:padding="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center"
             android:background="@drawable/minimundo"
             android:stretchColumns="6">
@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <EditText
@@ -75,7 +74,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -117,7 +115,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -174,7 +171,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -191,7 +187,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -233,7 +228,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -259,7 +253,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -291,7 +284,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView

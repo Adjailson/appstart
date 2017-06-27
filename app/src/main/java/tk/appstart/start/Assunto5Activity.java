@@ -1,5 +1,6 @@
 package tk.appstart.start;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import tk.appstart.game.Desafio10Activity;
 
 public class Assunto5Activity extends AppCompatActivity {
 
@@ -28,11 +31,10 @@ public class Assunto5Activity extends AppCompatActivity {
 
         imgLoop = (ImageView) findViewById(R.id.exemplo_loop);
 
-        startAnimacao();
-
         TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_loop);
         exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_python_loop.html")));
 
+        startAnimacao();
     }
 
     /**
@@ -72,7 +74,7 @@ public class Assunto5Activity extends AppCompatActivity {
     }
 
     public void exercicioAssunto5(View view){
-
+        startActivity(new Intent(this, Desafio10Activity.class));
     }
 
 
