@@ -14,6 +14,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import tk.appstart.start.BancoControle;
 import tk.appstart.start.MensagemDialog;
 import tk.appstart.start.R;
 import tk.appstart.start.ValidaVariavel;
@@ -33,6 +34,7 @@ public class Desafio3Activity extends AppCompatActivity {
     private TableRow[] row = new TableRow[4];
     private ImageView[][] objetos = new ImageView[4][6];
     private Random random = new Random();
+    private MediaPlayer toque1,toque2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,7 @@ public class Desafio3Activity extends AppCompatActivity {
                 }
                 row[linha].addView(objetos[linha][coluna], 75, 75);
             }
-            tabela.addView(row[linha], 450, TableRow.LayoutParams.WRAP_CONTENT);
+            tabela.addView(row[linha], 450, 675);
         }
         // Colocando os personagens nas posições da matriz
         objetos[2][0].setImageResource(R.drawable.passaro_avance);
@@ -95,7 +97,8 @@ public class Desafio3Activity extends AppCompatActivity {
                     if(!(txt2.isEmpty())){
                         if(txt1.equals(txt2)){
                             btPlay.setEnabled(false);
-                            new MediaPlayer().create(getApplicationContext(), R.raw.start).start();
+                            this.toque1 = MediaPlayer.create(this,R.raw.start);
+                            this.toque1.start();
                             avance();
                         }else{
                             MensagemDialog.openMensagem(this,"Opa!","A variável passada para a função não foi declarada.");
@@ -113,6 +116,8 @@ public class Desafio3Activity extends AppCompatActivity {
         }else if (txtButton.equals("Recarregar")){
             resetar();
         }else if (txtButton.equals("Finalizar")){
+            BancoControle controle = new BancoControle(this);
+            controle.salvarPontuacao(2,3);
             this.finish();
         }else{
             MensagemDialog.openMensagem(this,"Atenção","Crie uma variável e faça a chamada da mesma variável" +
@@ -158,7 +163,8 @@ public class Desafio3Activity extends AppCompatActivity {
             objetos[2][segundos-2].setImageResource(0);
             objetos[2][segundos-1].setImageResource(R.drawable.passaro_inicial);
             this.tempo.cancel();
-            new MediaPlayer().create(getApplicationContext(), R.raw.vitoria).start();
+            this.toque2 = MediaPlayer.create(this,R.raw.vitoria);
+            this.toque2.start();
             btPlay.setText("Finalizar");
             btPlay.setEnabled(true);
         }

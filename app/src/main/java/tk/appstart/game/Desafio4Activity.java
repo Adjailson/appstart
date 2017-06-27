@@ -17,6 +17,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import tk.appstart.start.BancoControle;
 import tk.appstart.start.R;
 
 /**
@@ -36,6 +37,7 @@ public class Desafio4Activity extends AppCompatActivity {
     private TableRow[] row = new TableRow[4];
     private ImageView[][] objetos = new ImageView[4][6];
     private Random random = new Random();
+    private MediaPlayer toque1,toque2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +48,8 @@ public class Desafio4Activity extends AppCompatActivity {
         gerarMinimundo();
         btPlay = (Button) findViewById(R.id.btDesafio4);
 
-        String[] vars1 = {"(2 >= 3)","(10 < 5)","2==(10//4)"};
-        String[] vars2 = {"(2 == 2)and(3 > 4)","(4 != 2)or(4 == 2)","not(2==2)"};
+        String[] vars1 = {"(2>=3)","(10<5)","2==(10//4)"};
+        String[] vars2 = {"(2==2)and(3 > 4)","(4!=2)or(4==2)","not(2==2)"};
         ArrayAdapter adapter1 = new ArrayAdapter<String>(this,
                 R.layout.estilo_spinner_operadores, vars1);
         ArrayAdapter adapter2 = new ArrayAdapter<String>(this,
@@ -84,11 +86,14 @@ public class Desafio4Activity extends AppCompatActivity {
         String txtBotao = ((Button)btPlay).getText().toString();
         if(txtBotao.equals("Executar")){
             btPlay.setEnabled(false);
-            new MediaPlayer().create(getApplicationContext(), R.raw.start).start();
+            this.toque1 = MediaPlayer.create(this,R.raw.start);
+            this.toque1.start();
             avance(7);
         }else if (txtBotao.equals("Recarregar")){
             resetar();
         }else if (txtBotao.equals("Próximo")){
+            BancoControle controle = new BancoControle(this);
+            controle.salvarPontuacao(3,1);
             startActivity(new Intent(this, Desafio5Activity.class));
             this.finish();
         }
@@ -132,7 +137,7 @@ public class Desafio4Activity extends AppCompatActivity {
                 }
                 row[linha].addView(objetos[linha][coluna], 75, 75);
             }
-            tabela.addView(row[linha], 450, TableRow.LayoutParams.WRAP_CONTENT);
+            tabela.addView(row[linha], 450, 675);
         }
         // Colocando os personagens nas posições da matriz
         objetos[1][1].setImageResource(0);
@@ -180,10 +185,12 @@ public class Desafio4Activity extends AppCompatActivity {
             }else if(segundos == 2){
                 objetos[1][1].setImageResource(R.drawable.passaro_avance);
             }else if(segundos == 3){
-                new MediaPlayer().create(getApplicationContext(), R.raw.batida).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
             }else if(segundos > 3){
                 this.tempo.cancel();
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }
@@ -195,10 +202,12 @@ public class Desafio4Activity extends AppCompatActivity {
                 objetos[1][0].setImageResource(0);
             }else if(segundos == 3){
                 objetos[2][0].setImageResource(R.drawable.passaro_inicial);
-                new MediaPlayer().create(getApplicationContext(), R.raw.batida).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
             }else if(segundos > 3){
                 this.tempo.cancel();
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }
@@ -206,11 +215,13 @@ public class Desafio4Activity extends AppCompatActivity {
         if(segundos == passos){
             tempo.cancel();
             if(segundos == passos && passos == 7){
-                new MediaPlayer().create(getApplicationContext(), R.raw.vitoria).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.vitoria);
+                this.toque2.start();
                 btPlay.setText("Próximo");
                 btPlay.setEnabled(true);
             }else{
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }

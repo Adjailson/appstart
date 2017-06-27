@@ -23,7 +23,9 @@ import static tk.appstart.start.MensagemDialog.toastMensagem;
 public class Assunto1Activity extends AppCompatActivity {
 
     private AlertDialog alerta = null;
-    private int contagemAcertos = 0;
+    private static int acertos = 0;
+    final int selecionou[] = new int[1];
+
     private ImageView imgSoma;
     private ImageView imgVariavel;
 
@@ -32,6 +34,8 @@ public class Assunto1Activity extends AppCompatActivity {
     private int segundoVariavel = 0;
     private Drawable drawable1;
     private Drawable drawable2;
+
+    BancoControle controle = new BancoControle(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,29 +162,28 @@ public class Assunto1Activity extends AppCompatActivity {
      *                fazer verificação de validação.
      * */
     private void dialogPergunta(String pergunta, CharSequence[] alternativas, final int correta) {
-        final CharSequence[] charSequences = alternativas;
-        // Usado para armazenar os valores que foram selecionados
-        final int[] resposta = new int[1];
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Estilo_Web_Site);
         builder.setTitle(pergunta);
         builder.setCancelable(false);
         // Usaremos 'setSingleChoiceItems' para pode selecionar apenas uma resposta:
-        builder.setSingleChoiceItems(charSequences, 0, new DialogInterface.OnClickListener() {
+        builder.setSingleChoiceItems(alternativas, 0, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int valor) {
-                resposta[0] = valor;
+            public void onClick(DialogInterface dialogs, int id) {
+                selecionou[0] = id;
             }
         });
 
         builder.setPositiveButton("Verificar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
-                if(resposta[0] == correta){
+            public void onClick(DialogInterface dialog, int valor) {
+                if(selecionou[0] == correta){
+                    acertos += 1;
                     mensagem("Você acertou!");
-                    contagemAcertos++;
-                }else {
-                    mensagem("Não foi dessa vez!");
+                    controle.salvarPontuacao(1,acertos);
+                }else{
+                    mensagem("Tente de novo.");
                 }
+                selecionou[0] = 0;
             }
         });
         TextView stylo_titlo = new TextView(this);

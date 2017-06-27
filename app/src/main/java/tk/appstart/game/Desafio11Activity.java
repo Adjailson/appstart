@@ -1,13 +1,15 @@
 package tk.appstart.game;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -24,10 +26,12 @@ import tk.appstart.start.ValidaVariavel;
  * Created by Adjailson on 17/06/2017.
  */
 
-public class Desafio10Activity extends AppCompatActivity {
+public class Desafio11Activity extends AppCompatActivity {
 
     private Button btPlay;
     private EditText valor1, valor2;
+    private boolean opc1 = false;
+    private boolean opc2 = false;
     private double real = 0.0;
     private int inteiro = 0;
     ValidaVariavel var = new ValidaVariavel();
@@ -43,17 +47,52 @@ public class Desafio10Activity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_desafio10);
+        setContentView(R.layout.layout_desafio11);
         getSupportActionBar().hide();
 
         tabela = (TableLayout) findViewById(R.id.table_minimundo);
         gerarMinimundo();
-        btPlay = (Button) findViewById(R.id.btDesafio10);
+        btPlay = (Button) findViewById(R.id.btDesafio11);
         valor1 = (EditText) findViewById(R.id.valor1);
         valor2 = (EditText) findViewById(R.id.valor2);
 
         TextView simbolo = (TextView) findViewById(R.id.operador_especial);
         simbolo.setText(" <= ");
+
+        String[] vars1 = {"False","True"};
+        String[] vars2 = {"(3<3)","(2<3)"};
+
+        ArrayAdapter adapter1 = new ArrayAdapter<String>(this,
+                R.layout.estilo_spinner_parametro, vars1);
+        ArrayAdapter adapter2 = new ArrayAdapter<String>(this,
+                R.layout.estilo_spinner_operadores, vars2);
+
+        Spinner sp1 = (Spinner) findViewById(R.id.opera_1);
+        sp1.setAdapter(adapter1);
+        Spinner sp2 = (Spinner) findViewById(R.id.opera_2);
+        sp2.setAdapter(adapter2);
+
+        // Eventos spinner:
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView parent, View view, int p, long id) {
+                if(p == 1){
+                    opc1 = true;
+                }else{
+                    opc1 = false;
+                }
+            }
+            public void onNothingSelected(AdapterView parent){}
+        });
+        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView parent, View view, int p, long id) {
+                if(p == 1){
+                    opc2 = true;
+                }else{
+                    opc2 = false;
+                }
+            }
+            public void onNothingSelected(AdapterView parent){}
+        });
 
     }
     /**
@@ -130,7 +169,6 @@ public class Desafio10Activity extends AppCompatActivity {
         } else if (txtBotao.equals("Recarregar")) {
             resetar();
         } else if (txtBotao.equals("Próximo")) {
-            startActivity(new Intent(this,Desafio11Activity.class));
             this.finish();
         }
     }

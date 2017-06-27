@@ -18,6 +18,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import tk.appstart.start.BancoControle;
 import tk.appstart.start.MensagemDialog;
 import tk.appstart.start.R;
 import tk.appstart.start.ValidaVariavel;
@@ -41,6 +42,7 @@ public class Desafio5Activity extends AppCompatActivity {
     private TableRow[] row = new TableRow[4];
     private ImageView[][] objetos = new ImageView[4][6];
     private Random random = new Random();
+    private MediaPlayer toque1,toque2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,7 +100,8 @@ public class Desafio5Activity extends AppCompatActivity {
                 if(txtCampo1.equals("numero") || txtCampo1.equals("valor")){
                     if(txtCampo2.equals("numero") || txtCampo2.equals("valor")){
                         btPlay.setEnabled(false);
-                        new MediaPlayer().create(getApplicationContext(), R.raw.start).start();
+                        this.toque1 = MediaPlayer.create(this,R.raw.start);
+                        this.toque1.start();
                         avance(7);
                     }else{
                         MensagemDialog.openMensagem(this,"Opa!","A variável '"+txtCampo2+"' não é " +
@@ -115,6 +118,8 @@ public class Desafio5Activity extends AppCompatActivity {
         }else if (txtBotao.equals("Recarregar")){
             resetar();
         }else if (txtBotao.equals("Próximo")){
+            BancoControle controle = new BancoControle(this);
+            controle.salvarPontuacao(3,2);
             startActivity(new Intent(this, Desafio6Activity.class));
             this.finish();
         }
@@ -158,7 +163,7 @@ public class Desafio5Activity extends AppCompatActivity {
                 }
                 row[linha].addView(objetos[linha][coluna], 75, 75);
             }
-            tabela.addView(row[linha], 450, TableRow.LayoutParams.WRAP_CONTENT);
+            tabela.addView(row[linha], 450, 675);
         }
         // Colocando os personagens nas posições da matriz
         objetos[0][1].setImageResource(0);
@@ -199,8 +204,10 @@ public class Desafio5Activity extends AppCompatActivity {
                 String valor = ((EditText)txt_var1).getText().toString();
                 if(valor.equals("valor")){
                     this.tempo.cancel();
-                    new MediaPlayer().create(getApplicationContext(), R.raw.batida).start();
-                    new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                    this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                    this.toque2.start();
+                    this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                    this.toque1.start();
                     btPlay.setText("Recarregar");
                     btPlay.setEnabled(true);
                 }else{
@@ -212,7 +219,8 @@ public class Desafio5Activity extends AppCompatActivity {
                     objetos[1][segundos - 4].setImageResource(0);
                     objetos[1][segundos - 3].setImageResource(R.drawable.passaro_avance);
                     this.tempo.cancel();
-                    new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                    this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                    this.toque1.start();
                     btPlay.setText("Recarregar");
                     btPlay.setEnabled(true);
                 }else {
@@ -226,10 +234,12 @@ public class Desafio5Activity extends AppCompatActivity {
             }else if(segundos == 2){
                 objetos[0][1].setImageResource(R.drawable.passaro_avance);
             }else if(segundos == 3){
-                new MediaPlayer().create(getApplicationContext(), R.raw.batida).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
             }else if(segundos > 3){
                 this.tempo.cancel();
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.falha);
+                this.toque2.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }
@@ -241,10 +251,12 @@ public class Desafio5Activity extends AppCompatActivity {
                 objetos[0][0].setImageResource(0);
             }else if(segundos == 3){
                 objetos[1][0].setImageResource(R.drawable.passaro_inicial);
-                new MediaPlayer().create(getApplicationContext(), R.raw.batida).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
             }else if(segundos > 3){
                 this.tempo.cancel();
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }
@@ -252,11 +264,13 @@ public class Desafio5Activity extends AppCompatActivity {
         if(segundos == passos){
             tempo.cancel();
             if(segundos == passos && passos == 7){
-                new MediaPlayer().create(getApplicationContext(), R.raw.vitoria).start();
+                this.toque1 = MediaPlayer.create(this,R.raw.vitoria);
+                this.toque1.start();
                 btPlay.setText("Próximo");
                 btPlay.setEnabled(true);
             }else{
-                new MediaPlayer().create(getApplicationContext(), R.raw.falha).start();
+                this.toque2 = MediaPlayer.create(this,R.raw.falha);
+                this.toque2.start();
                 btPlay.setText("Recarregar");
                 btPlay.setEnabled(true);
             }

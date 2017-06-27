@@ -8,38 +8,34 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/estilo_barra"
+            android:textColor="@color/colorBranco"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16dp"
+            android:text="1 - Complete o código até chegar ao porco malvado."/>
+
         <TableLayout
             android:id="@+id/table_minimundo"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/minimundo"
             android:stretchColumns="6">
         </TableLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Programe o melhor caminho para que o passáro alcance o porco malvado."
-                android:textColor="@color/colorPreta"
-                android:textSize="16dp" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -73,7 +69,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -115,7 +110,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -157,7 +151,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -189,7 +182,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
@@ -231,7 +223,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorIde"
             android:orientation="horizontal">
 
             <TextView
