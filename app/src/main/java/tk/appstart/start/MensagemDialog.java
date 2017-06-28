@@ -39,7 +39,7 @@ public class MensagemDialog {
         final Toast toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
         toast.setGravity(posicao, 0, 0);
         toast.getView().setBackgroundResource(R.drawable.estilo_barra);
-        toast.getView().setPadding(20,0,20,0);
+        toast.getView().setPadding(20,20,20,20);
         toast.show();
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

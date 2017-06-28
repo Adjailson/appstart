@@ -34,8 +34,8 @@ public class Assunto4Activity extends AppCompatActivity {
         TextView txtCodigo = (TextView) findViewById(R.id.codigo_if_else);
         txtCodigo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_condicional.html")));
 
-        TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_condicional);
-        exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_condicional2.html")));
+        TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_elif);
+        exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_elif.html")));
 
         startAnimacao();
 
@@ -80,7 +80,6 @@ public class Assunto4Activity extends AppCompatActivity {
 
     public void exercicioAssunto4(View view){
         startActivity(new Intent(this, Desafio7Activity.class));
-        this.finish();
     }
 
 }

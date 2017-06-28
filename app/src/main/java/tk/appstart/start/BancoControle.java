@@ -13,6 +13,7 @@ public class BancoControle {
 
     private SQLiteDatabase db;
     private BancoStart banco;
+    private int pontos;
 
     public BancoControle(Context context){
         banco = new BancoStart(context);
@@ -36,28 +37,30 @@ public class BancoControle {
         return resultado;
     }
 
-    public void salvarPontuacao(int coluna, int pontos){
+    public void salvarPontuacao(int coluna){
         //UPDATE pontos SET coluna=pontos WHERE id=2017;
         ContentValues valores;
+        this.pontos = Integer.parseInt(getValorColuna(coluna));
+        this.pontos += 1;
         String condicao;
         db = banco.getWritableDatabase();
         condicao = BancoStart.ID + "=" + 2017;
         valores = new ContentValues();
         switch (coluna){
             case 1:
-                valores.put(BancoStart.LOGICA, pontos);
+                valores.put(BancoStart.LOGICA, this.pontos);
                 break;
             case 2:
-                valores.put(BancoStart.TIPOS, pontos);
+                valores.put(BancoStart.TIPOS, this.pontos);
                 break;
             case 3:
-                valores.put(BancoStart.OPERADORES, pontos);
+                valores.put(BancoStart.OPERADORES, this.pontos);
                 break;
             case 4:
-                valores.put(BancoStart.CONDICIONAIS, pontos);
+                valores.put(BancoStart.CONDICIONAIS, this.pontos);
                 break;
             case 5:
-                valores.put(BancoStart.LOOPS, pontos);
+                valores.put(BancoStart.LOOPS, this.pontos);
                 break;
         }
         db.update(BancoStart.TABELA,valores,condicao,null);
@@ -119,7 +122,8 @@ public class BancoControle {
     }
     */
     public String resetarTudo(){
-        if(Integer.parseInt(getValorColuna(5)) == 3) {
+        int valor = Integer.parseInt(getValorColuna(5));
+        if(valor >= 3) {
             ContentValues valores;
             String condicao;
             db = banco.getWritableDatabase();

@@ -6,99 +6,25 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp"
-        android:layout_marginTop="10dp">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
+            android:background="@drawable/estilo_barra"
+            android:textColor="@color/colorBranco"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18dp"
+            android:text="Nomes de variaveis e palavras reservadas"/>
 
         <TextView
+            android:id="@+id/mais_sobre_var"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
+            android:padding="10dp"
             android:textColor="@color/colorTexto"
             android:textSize="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
-            android:textColor="@color/colorTexto"
-            android:textSize="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
-            android:textColor="@color/colorTexto"
-            android:textSize="16dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
-            android:textColor="@color/colorTexto"
-            android:textSize="16dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
-            android:textColor="@color/colorTexto"
-            android:textSize="16dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Titulo exemplo"
-            android:layout_marginBottom="3dp"
-            android:textColor="@color/azulEscuro"
-            android:textSize="18dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Textos informátivos como escrever variáveis e suas regras quanto a símbolos e números e etc."
-            android:textColor="@color/colorTexto"
-            android:textSize="16dp" />
-
-
     </LinearLayout>
 
 </ScrollView>

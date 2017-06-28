@@ -15,6 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@color/colorBranco"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="15dp"
@@ -34,6 +35,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/sobre_loops"
                 android:textColor="@color/colorTexto"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nExemplo: Média das notas 8 e 6"
+                android:textColor="@color/colorTexto"
+                android:layout_marginBottom="5dp"
                 android:textSize="16dp" />
 
             <ImageView
@@ -67,12 +76,22 @@
                 android:id="@+id/exemplo_codigo_loop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textColor="@color/colorTexto"
+                android:typeface="monospace"
+                android:textStyle="bold"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/explicacao_loop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTexto"
+                android:textSize="16dp" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/estilo_botao"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"

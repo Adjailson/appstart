@@ -117,7 +117,7 @@ public class Desafio3Activity extends AppCompatActivity {
             resetar();
         }else if (txtButton.equals("Finalizar")){
             BancoControle controle = new BancoControle(this);
-            controle.salvarPontuacao(2,3);
+            controle.salvarPontuacao(2);
             this.finish();
         }else{
             MensagemDialog.openMensagem(this,"Atenção","Crie uma variável e faça a chamada da mesma variável" +

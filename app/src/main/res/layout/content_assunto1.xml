@@ -79,6 +79,37 @@
                 android:layout_width="170dp"
                 android:layout_height="390dp"
                 android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/variaveis"
+                android:textColor="@color/azulEscuro"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/sobre_variaveis"
+                android:textColor="@color/colorTexto"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/codigo_subtracao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTexto"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/animacao_variavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
                 />
 
             <TextView
@@ -113,7 +144,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/variaveis"
+                    android:text="Python e variáveis"
                     android:textColor="@color/azulEscuro"
                     android:textSize="18dp" />
 
@@ -127,28 +158,6 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@string/sobre_variaveis"
-                android:textColor="@color/colorTexto"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/codigo_subtracao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTexto"
-                android:textSize="16dp" />
-
-            <ImageView
-                android:id="@+id/animacao_variavel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                />
-
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
@@ -157,7 +166,7 @@
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="30dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/estilo_botao"
                 android:onClick="exercicioAssunto1"
                 android:padding="10dp"
                 android:textAllCaps="false"

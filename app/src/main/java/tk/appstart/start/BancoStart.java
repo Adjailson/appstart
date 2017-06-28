@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class BancoStart extends SQLiteOpenHelper {
 
-    protected static final String NOME_BANCO = "banco.db";
+    private static final String NOME_BANCO = "banco.db";
     protected static final String TABELA = "pontos";
     protected static final String ID = "id";
     protected static final String LOGICA = "logica";
@@ -18,7 +18,7 @@ public class BancoStart extends SQLiteOpenHelper {
     protected static final String OPERADORES = "operadores";
     protected static final String CONDICIONAIS = "condicionais";
     protected static final String LOOPS = "loops";
-    protected static final int VERSAO = 1;
+    private static final int VERSAO = 1;
 
     public BancoStart(Context context){
         super(context,NOME_BANCO,null,VERSAO);
@@ -26,7 +26,7 @@ public class BancoStart extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE "+TABELA+"("
+        String sql = "CREATE TABLE IF NOT EXISTS "+TABELA+"("
                 + ID + " integer primary key,"
                 + LOGICA + " integer,"
                 + TIPOS + " integer,"
@@ -39,7 +39,7 @@ public class BancoStart extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS" + TABELA);
-        onCreate(db);
+        //db.execSQL("CREATE TABLE IF NOT EXISTS" + TABELA);
+        //onCreate(db);
     }
 }

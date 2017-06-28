@@ -23,38 +23,35 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorTexto"
+                android:text="São símbolos utilizados para representar sentenças. Na computaçao alguns deles ganhan outro formato."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="18dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/azulEscuro"
-                android:text="@string/operadores"/>
+                android:text="@string/operadores_arit"/>
 
 
             <!--área operadores aritmétricos-->
             <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:stretchColumns="0">
-
-                <TableRow
-                    >
-                    <TextView
-                        android:textSize="18dp"
-                        android:textColor="@color/colorBranco"
-                        android:text="@string/operadores_arit"
-                        android:background="@color/azulMedio"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:padding="6dip" />
-
-                </TableRow>
 
                 <TableRow
                     >
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/azulFuncoes"
                         android:text="@string/soma"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -64,7 +61,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorVermelho"
                         android:text="@string/subtracao"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -76,7 +73,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/multiplicacao"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorVerde"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -86,7 +83,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/divisao"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorAmarelo"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -96,7 +93,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/divisao_int"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorLaranja"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -104,7 +101,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPreta"
                         android:text="@string/potenciacao"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -131,31 +128,27 @@
 
 
             <!--área do operadores lógicos-->
-            <TableLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/azulEscuro"
+                android:text="@string/operadores_logi"/>
+            <TableLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:stretchColumns="0">
-
-                <TableRow
-                    >
-                    <TextView
-                        android:textSize="18dp"
-                        android:textColor="@color/colorBranco"
-                        android:text="@string/operadores_logi"
-                        android:background="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:padding="6dip" />
-
-                </TableRow>
 
                 <TableRow
                     >
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorVerde"
                         android:text="@string/maior"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -166,7 +159,7 @@
                         android:id="@+id/menor_que"
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorVermelho"
                         android:text="@string/menor"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -178,7 +171,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/maior_igual"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorLodo"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -189,7 +182,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/menor_igual"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorLaranja"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -199,7 +192,7 @@
                         android:background="@drawable/estilo_table"
                         android:text="@string/igual"
                         android:gravity="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorMaron"
                         android:padding="4dip" />
                 </TableRow>
 
@@ -207,7 +200,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/azulFuncoes"
                         android:text="@string/atribuicao"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -217,7 +210,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorRoxo"
                         android:text="@string/diferenca"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -227,7 +220,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPreta"
                         android:text="@string/negacao"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -237,7 +230,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/azulClaro"
                         android:text="@string/and"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -247,7 +240,7 @@
                     <TextView
                         android:textSize="20dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorLaranja"
                         android:text="@string/or"
                         android:gravity="center"
                         android:padding="4dip" />
@@ -275,7 +268,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/estilo_botao"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"

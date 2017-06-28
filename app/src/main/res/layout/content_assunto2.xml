@@ -24,14 +24,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="Combinação de valores operacionais que sao guardados nas variáveis."
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:textColor="@color/azulEscuro"
-                android:text="@string/tipos_dados"/>
+                android:layout_marginBottom="10dp"/>
 
             <TableLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="1">
 
@@ -42,14 +42,14 @@
                         android:text="Tipos"
                         android:gravity="center"
                         android:textColor="@color/colorBranco"
-                        android:background="@color/azulMedio"
+                        android:background="@drawable/estilo_barra"
                         android:textStyle="bold"
                         android:padding="6dip" />
                     <TextView
                         android:textSize="18dp"
                         android:textColor="@color/colorBranco"
                         android:text="Exemplos"
-                        android:background="@color/azulMedio"
+                        android:background="@drawable/estilo_barra"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:padding="6dip" />
@@ -61,13 +61,13 @@
                     <TextView
                         android:textSize="15dp"
                         android:text="int/Integer(nºs inteiros)"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/azulClaro"
                         android:background="@drawable/estilo_table"
                         android:padding="4dip" />
                     <TextView
                         android:textSize="15dp"
                         android:background="@drawable/estilo_table"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/azulClaro"
                         android:text="..., -3, -2, -1, 0, 1, 2, 3, ..."
                         android:gravity="center"
                         android:padding="4dip" />
@@ -147,7 +147,15 @@
                 android:layout_marginTop="5dp"/>
 
             <TextView
-                android:id="@+id/exemplo_tipoDados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="Exemplo 1 em Python:"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/exemplo_codigo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:typeface="monospace"
@@ -155,10 +163,43 @@
                 android:textColor="@color/colorTexto"
                 android:textSize="18dp"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="Observa-se que a variável x recebeu um tipo decimal."
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="\nExemplo 2 em Python:"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/exemplo_codigo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textStyle="bold"
+                android:textColor="@color/colorTexto"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="Ou seja, não podemos fazer operações matemática com textos ou String."
+                android:layout_marginTop="5dp"/>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/azulMedio"
+                android:background="@drawable/estilo_botao"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"

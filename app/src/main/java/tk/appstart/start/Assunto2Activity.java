@@ -20,16 +20,15 @@ public class Assunto2Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Exemplo de código explicando diferenças em tipo de dados
-        TextView exemplo1 = (TextView) findViewById(R.id.exemplo_tipoDados);
-        exemplo1.setText(Html.fromHtml("valor = <font color='#006dbd'>10</font><br>\n" +
-                "texto = <font color='#008000'>\"10\"</font><br>\n" +
-                "<font color='#a61a98'>print</font>(valor + texto)<br><br>\n" +
-                "<font color='#0000CD'> SAIDA>>> Erro! o tipo 'int' não pode ser somado com 'String'.</font>"));
+        TextView exemplo1 = (TextView) findViewById(R.id.exemplo_codigo1);
+        exemplo1.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo1.html")));
+
+        TextView exemplo2 = (TextView) findViewById(R.id.exemplo_codigo2);
+        exemplo2.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo2.html")));
 
     }
     public void exercicioAssunto2(View view){
         startActivity(new Intent(this, Desafio1Activity.class));
-        this.finish();
     }
 
 }

@@ -9,14 +9,15 @@
     tools:showIn="@layout/activity_main">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         >
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorBranco">
 
             <ImageView
                 android:id="@+id/banner"
@@ -31,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
                 android:layout_marginBottom="5dp"
-                android:background="@color/colorCinzaLeve"
+                android:background="@color/transparent"
                 android:drawableLeft="@drawable/logica"
                 android:onClick="btConteudo1"
                 android:paddingBottom="3dp"
@@ -48,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
                 android:layout_marginBottom="5dp"
-                android:background="@color/colorCinzaLeve"
+                android:background="@color/transparent"
                 android:drawableLeft="@drawable/tipodados"
                 android:onClick="btConteudo2"
                 android:paddingBottom="3dp"
@@ -65,7 +66,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
                 android:layout_marginBottom="5dp"
-                android:background="@color/colorCinzaLeve"
+                android:background="@color/transparent"
                 android:drawableLeft="@drawable/operadores"
                 android:onClick="btConteudo3"
                 android:paddingBottom="3dp"
@@ -82,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
                 android:layout_marginBottom="5dp"
-                android:background="@color/colorCinzaLeve"
+                android:background="@color/transparent"
                 android:drawableLeft="@drawable/condicionais"
                 android:onClick="btConteudo4"
                 android:paddingBottom="3dp"
@@ -99,7 +100,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
                 android:layout_marginBottom="5dp"
-                android:background="@color/colorCinzaLeve"
+                android:background="@color/transparent"
                 android:drawableLeft="@drawable/loop"
                 android:onClick="btConteudo5"
                 android:paddingBottom="3dp"

@@ -16,6 +16,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@color/colorBranco"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="15dp"
@@ -73,8 +74,17 @@
                 android:textStyle="bold"
                 android:textSize="17dp"
                 />
+
             <TextView
-                android:id="@+id/exemplo_codigo_condicional"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16dp"
+                android:textColor="@color/colorTexto"
+                android:text="@string/sobre_elif"/>
+
+
+            <TextView
+                android:id="@+id/exemplo_codigo_elif"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTexto"
@@ -83,20 +93,17 @@
                 android:textSize="17dp"
                 />
 
-
-
-
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:textSize="16dp"
                 android:textColor="@color/colorTexto"
-                android:text="@string/sobre_parentese"/>
+                android:text="@string/mais_sobre_elif"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/estilo_botao"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"

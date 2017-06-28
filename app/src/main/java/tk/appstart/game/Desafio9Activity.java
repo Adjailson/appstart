@@ -134,7 +134,7 @@ public class Desafio9Activity extends AppCompatActivity {
             resetar();
         } else if (txtBotao.equals("Finalizar")) {
             BancoControle controle = new BancoControle(this);
-            controle.salvarPontuacao(4,3);
+            controle.salvarPontuacao(4);
             this.finish();
         }
     }

@@ -49,7 +49,7 @@ public class Desafio4Activity extends AppCompatActivity {
         btPlay = (Button) findViewById(R.id.btDesafio4);
 
         String[] vars1 = {"(2>=3)","(10<5)","2==(10//4)"};
-        String[] vars2 = {"(2==2)and(3 > 4)","(4!=2)or(4==2)","not(2==2)"};
+        String[] vars2 = {"(2==2)and(3>4)","(4!=2)or(4==2)","not(2==2)"};
         ArrayAdapter adapter1 = new ArrayAdapter<String>(this,
                 R.layout.estilo_spinner_operadores, vars1);
         ArrayAdapter adapter2 = new ArrayAdapter<String>(this,
@@ -93,7 +93,7 @@ public class Desafio4Activity extends AppCompatActivity {
             resetar();
         }else if (txtBotao.equals("Próximo")){
             BancoControle controle = new BancoControle(this);
-            controle.salvarPontuacao(3,1);
+            controle.salvarPontuacao(3);
             startActivity(new Intent(this, Desafio5Activity.class));
             this.finish();
         }

@@ -132,7 +132,7 @@ public class Desafio10Activity extends AppCompatActivity {
             resetar();
         } else if (txtBotao.equals("Próximo")) {
             BancoControle controle = new BancoControle(this);
-            controle.salvarPontuacao(5,1);
+            controle.salvarPontuacao(5);
             startActivity(new Intent(this,Desafio11Activity.class));
             this.finish();
         }

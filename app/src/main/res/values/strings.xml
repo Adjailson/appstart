@@ -34,8 +34,7 @@
     <string name="sobre_condicionais">São desvios na execução do algoritmo devido a uma condição específica.\n</string>
     <string name="sobre_cond_python">Na linguagem Python usamos <b>if</b> e <b>else</b>. Exemplo: </string>
 
-    <string name="sobre_aspas">Quando usamos valores entre aspas duplas, esses valores assumem o tipo String ou texto.\n\nExemplo em Python:</string>
-    <string name="sobre_parentese">No cálculo da média colocamos os valores em parêntese para que primeiro calcule à soma e depois faz a divisão dessa soma.</string>
+    <string name="sobre_aspas">Quando usamos valores entre aspas duplas, esses valores assumem o tipo String ou texto.</string>
 
     <string name="exemplo_strings">\"Start\", \"2017\", \"@, _,+\"</string>
 
@@ -60,8 +59,8 @@
 
     <string name="tituloLoops">Loops</string>
     <string name="sobre_loops">O loop é uma estrutura de repetição mais simples. Ele repete a execução de um bloco de sentenças enquanto uma condição permanecer verdadeira.</string>
-    <string name="sobre_loop_mais">Na primeira vez que a condição se tornar falsa, o loop não repetirá a execução do bloco, e a execução continuará com a sentença ou comando que vem logo após o bloco do loop, na seqüência do programa.</string>
-    <string name="exemplo_loop_python">\nNa linguagem Python usaremos o <b>while</b></string>
+    <string name="sobre_loop_mais">Assim como o <b>if</b> que executa uma única vez o <b>while</b> enquanto for verdadeiro ele fica repetindo até que uma condição seja falsa.</string>
+    <string name="exemplo_loop_python">\nNa linguagem Python usaremos o <b>while</b>. Exemplo em Python:</string>
     <string name="tituloFuncoes">Funções</string>
 
     <string name="title_activity_sobre">Sobre</string>
@@ -84,5 +83,11 @@
     <string name="linkRobocode"><u>http://robocode.sourceforge.net/</u></string>
     <string name="linkKhanAcademy"><u>https://pt.khanacademy.org/computing</u></string>
     <string name="txt_exemplo">Exemplo: Média das notas 8 e 6</string>
+
+    <string name="sobre_elif">Podemos verificar mais de uma condição verdadeira com o uso do <b>elif</b>. O
+     <b>elif</b> pode ser escrito mais de uma fez.</string>
+
+    <string name="mais_sobre_elif">Mas atenção! se o primeiro <b>if</b> for verdadeiro o programa não verifica o restante.
+         Assim também acontece com <b>elif</b>.</string>
 
 </resources>

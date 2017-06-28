@@ -52,7 +52,7 @@ public class Desafio6Activity extends AppCompatActivity {
         btPlay = (Button) findViewById(R.id.btDesafio6);
         valor = (EditText) findViewById(R.id.txt_valor);
 
-        String[] vars1 = {"(2**3 == 8)","(2== 5//2)","(2>3)and(2<3)"};
+        String[] vars1 = {"(2**3 ==8)","(2 ==5//2)","(2>3)and(2<3)"};
 
         ArrayAdapter adapter1 = new ArrayAdapter<String>(this,
                 R.layout.estilo_spinner_operadores, vars1);
@@ -89,7 +89,7 @@ public class Desafio6Activity extends AppCompatActivity {
                 resetar();
             } else if (txtBotao.equals("Finalizar")) {
                 BancoControle controle = new BancoControle(this);
-                controle.salvarPontuacao(3,3);
+                controle.salvarPontuacao(3);
                 this.finish();
             }
         }else{

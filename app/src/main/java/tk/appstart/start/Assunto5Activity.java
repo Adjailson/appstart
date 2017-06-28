@@ -34,6 +34,9 @@ public class Assunto5Activity extends AppCompatActivity {
         TextView exemplo = (TextView) findViewById(R.id.exemplo_codigo_loop);
         exemplo.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("exemplo_codigo_python_loop.html")));
 
+        TextView explicacao = (TextView) findViewById(R.id.explicacao_loop);
+        explicacao.setText(Html.fromHtml(new ArquivoHtml(this).openCodigoHtml("explicacao_loop.html")));
+
         startAnimacao();
     }
 

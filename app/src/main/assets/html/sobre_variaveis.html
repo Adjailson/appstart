@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+Os programadores geralmente escolhem nomes significativos para suas variáveis,
+ pois os nomes documentam para o que a variável é usada.<br><br>
+Nomes de variáveis podem ser arbitrariamente longos. Eles podem conter tanto
+ letras quanto números, mas têm de começar com uma letra. <br><br>
+Embora seja válida a utilização de letras maiúsculas, por convenção, não usamos.
+ Se você o fizer, lembre-se de que maiúsculas e minúsculas são diferentes.
+<font color="#1a8018"><b> Bruno</b></font> e <font color="#1a8018"><b> bruno</b></font>
+ são variáveis diferentes.<br><br>
+O caractere para sublinhado ( <b>_</b> ) pode aparecer em um nome. Ele é muito utilizado
+ em nomes com múltiplas palavras, tal como em <font color="#1a8018"><b>meu_nome </b></font>
+ou <font color="#1a8018"><b> valor_x</b></font>.<br><br>
+Se você der a uma variável um nome inválido, causará um erro de sintaxe:<br><br>
+<font color="#f93f48">
+    &nbsp;76passos = "grande parada"<br>
+    &nbsp;SyntaxError: invalid syntax<br>
+    &nbsp;valor$ = 1000000<br>
+    &nbsp;SyntaxError: invalid syntax<br>
+    &nbsp;class = "Ciencias da Computacao 101"<br>
+    &nbsp;SyntaxError: invalid syntax
+</font>
+<br><br>
+<font color="#1a8018"><b>76passos</b></font> é inválida por não começar com uma letra.
+<font color="#1a8018"><b> valor$</b></font> é inválida por conter um caractere ilegal, o cifrão.
+ Mas o que está errado com <font color="#1a8018"><b> class</b></font> ?<br><br>
+Ocorre que <font color="#1a8018"><b> class</b></font> é uma das <b>palavras reservadas</b> em Python. Palavras reservadas
+ definem as regras e a estrutura da linguagem e não podem ser usadas como nomes de variáveis.
+<br><br>
+<font color="#107ac6"><b>Python tem 29 palavras reservadas:</b></font><br><br>
+<font color="#a61a98">
+and &nbsp;&nbsp;&nbsp; def   &nbsp;&nbsp;&nbsp;    exec <br>
+if    &nbsp;&nbsp;&nbsp;    not   &nbsp;&nbsp;&nbsp;    return <br>
+assert  &nbsp;&nbsp;&nbsp;  del   &nbsp;&nbsp;&nbsp;    finally <br>
+import &nbsp;&nbsp;&nbsp;  or     &nbsp;&nbsp;&nbsp;   try <br>
+break &nbsp;&nbsp;&nbsp;    elif    &nbsp;&nbsp;&nbsp;  for <br>
+in   &nbsp;&nbsp;&nbsp;     pass  &nbsp;&nbsp;&nbsp;    while <br>
+class &nbsp;&nbsp;&nbsp;    else    &nbsp;&nbsp;&nbsp;  from <br>
+is    &nbsp;&nbsp;&nbsp;    print  &nbsp;&nbsp;&nbsp;   yield <br>
+continue &nbsp;&nbsp;&nbsp; except   &nbsp;&nbsp;&nbsp; global <br>
+lambda  &nbsp;&nbsp;&nbsp;  raise <br>
+</font>
+<br>
+Pode ser útil ter essa lista à mão. Se o interpretador acusar erro sobre um de
+ seus nomes de variável e você não souber o porquê, veja se o nome está na lista.<br><br><br>

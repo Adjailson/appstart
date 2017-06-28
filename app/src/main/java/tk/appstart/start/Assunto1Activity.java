@@ -1,6 +1,7 @@
 package tk.appstart.start;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -23,7 +24,6 @@ import static tk.appstart.start.MensagemDialog.toastMensagem;
 public class Assunto1Activity extends AppCompatActivity {
 
     private AlertDialog alerta = null;
-    private static int acertos = 0;
     final int selecionou[] = new int[1];
 
     private ImageView imgSoma;
@@ -108,11 +108,8 @@ public class Assunto1Activity extends AppCompatActivity {
         }
     }
 
-    /**
-     * A ação do botão deve abrir um layout xml dentro de uma AlertDialog
-     * */
     public void btSobreVariaveis(View view){
-        MensagemDialog.openLayoutDialog(this, "Como declarar variáveis ?", R.layout.informacoes_variaveis);
+        startActivity(new Intent(this,VariaveisActivity.class));
     }
 
     /**
@@ -177,9 +174,8 @@ public class Assunto1Activity extends AppCompatActivity {
         builder.setPositiveButton("Verificar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int valor) {
                 if(selecionou[0] == correta){
-                    acertos += 1;
                     mensagem("Você acertou!");
-                    controle.salvarPontuacao(1,acertos);
+                    controle.salvarPontuacao(1);
                 }else{
                     mensagem("Tente de novo.");
                 }
