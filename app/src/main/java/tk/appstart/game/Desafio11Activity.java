@@ -33,6 +33,7 @@ public class Desafio11Activity extends AppCompatActivity {
     private EditText valor1, valor2;
     private boolean opc1 = false;
     private boolean opc2 = false;
+    private boolean opc3 = false;
     private double real = 0.0;
     private int inteiro = 0;
     ValidaVariavel var = new ValidaVariavel();
@@ -141,6 +142,11 @@ public class Desafio11Activity extends AppCompatActivity {
         if(txtBotao.equals("Executar")){
             if(!(txt1.isEmpty())){
                 if(!(txt2.isEmpty())){
+                    if(Integer.parseInt(txt2) > 2){
+                        opc3 = true;
+                    }else{
+                        opc3 = false;
+                    }
                     if(var.isNumero(txt2)){
                         this.repeticoes = Integer.parseInt(txt1);
                         try {// tratamento de divisão por zero em java
@@ -169,7 +175,7 @@ public class Desafio11Activity extends AppCompatActivity {
             }
         } else if (txtBotao.equals("Recarregar")) {
             resetar();
-        } else if (txtBotao.equals("Próximo")) {
+        } else if (txtBotao.equals("Finalizar")) {
             BancoControle controle = new BancoControle(this);
             controle.salvarPontuacao(5);
             this.finish();
@@ -207,37 +213,175 @@ public class Desafio11Activity extends AppCompatActivity {
 
     private void caminhar() {
         segundos++;
-        if(repeticoes > 0){
-            if((real == 3.0) && (inteiro == 3)) {
-                // faz 7 passos
-                passos(segundos, 7);
-            }else if((real > 2.0) && (inteiro == 2)){
-                passos(segundos,7);
-            }else if((real > 3.0) && (inteiro >= 3)){// caso de perda
-                // faz mais de 7 passos
-                passos(segundos,8);
+        if((opc1 == true) && (opc2 == true) && (opc3 == false)){// perda
+            if(segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2) {//esquerda
+                objetos[3][1].setImageResource(R.drawable.passaro_acima);
+            }else if(segundos == 3) {//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_inicial);
+            }else if(segundos == 4) {//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
 
-            // casos de perdas
-            }else if((inteiro < 2) && (inteiro > 0)){
-                if((real == 1.0) && (inteiro == 1)){
+        }else if((opc1 == true) && (opc2 == true) && (opc3 == true)){ // ganha
+
+            //=========================================================
+
+            if(repeticoes > 0){
+                if((real == 3.0) && (inteiro == 3)) {
+                    // faz 7 passos
+                    passos(segundos, 7);
+                }else if((real > 2.0) && (inteiro == 2)){
+                    passos(segundos,7);
+                }else if((real > 3.0) && (inteiro >= 3)){// caso de perda
+                    // faz mais de 7 passos
+                    passos(segundos,8);
+
+                    // casos de perdas
+                }else if((inteiro < 2) && (inteiro > 0)){
+                    if((real == 1.0) && (inteiro == 1)){
+                        passos(segundos,3);
+                    }else{
+                        passos(segundos,5);
+                    }
+                }else if((real < 1.0) && (inteiro == 0)){
+                    // faz 3 passos
                     passos(segundos,3);
-                }else{
+                }else if((real == 2.0) && (inteiro == 2)){
                     passos(segundos,5);
                 }
-            }else if((real < 1.0) && (inteiro == 0)){
-                // faz 3 passos
-                passos(segundos,3);
-            }else if((real == 2.0) && (inteiro == 2)){
-                passos(segundos,5);
+            }else {
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.falha);
+                this.toque2.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
             }
-        }else {
-            this.tempo.cancel();
-            this.toque2 = MediaPlayer.create(this,R.raw.falha);
-            this.toque2.start();
-            this.btPlay.setText("Recarregar");
-            this.btPlay.setEnabled(true);
+
+        //========================================================
+
+        }else if((opc1 == false) && (opc2 == true) && (opc3 == true)){// perda
+            if(segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2) {//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_inicial);
+            }else if(segundos == 3) {//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
+
+        }else if((opc1 == false) && (opc2 == true) && (opc3 == false)){// perda
+            if(segundos == 1){//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2){//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_inicial);
+            }else if(segundos == 3){//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_volta);
+            }else if(segundos == 4) {//avance
+                objetos[3][1].setImageResource(0);
+                objetos[3][0].setImageResource(R.drawable.passaro_volta);
+            }else if(segundos == 5){// batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
+
+        }else if((opc1 == false) && (opc2 == false) && (opc3 == true)){// perda
+            if(segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2) {//esquerda
+                objetos[3][1].setImageResource(R.drawable.passaro_acima);
+            }else if(segundos == 3) {//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 4) {//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
+
+        }else if((opc1 == true) && (opc2 == false) && (opc3 == false)){// perda
+            if(segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2) {//esquerda
+                objetos[3][1].setImageResource(R.drawable.passaro_acima);
+            }else if(segundos == 3) {//avance
+                objetos[3][1].setImageResource(0);
+                objetos[2][1].setImageResource(R.drawable.passaro_acima);
+            }else if(segundos == 4) {//esquerda
+                objetos[2][1].setImageResource(R.drawable.passaro_volta);
+            }else if(segundos == 5){//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
+
+        }else if((opc1 == true) && (opc2 == false) && (opc3 == true)) {// perda
+            if (segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            } else if (segundos == 2) {//esquerda
+                objetos[3][1].setImageResource(R.drawable.passaro_acima);
+            } else if (segundos == 3) {//avance
+                objetos[3][1].setImageResource(0);
+                objetos[2][1].setImageResource(R.drawable.passaro_acima);
+            } else if (segundos == 4) {//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
+
+        }else if((opc1 == false) && (opc2 == false) && (opc3 == false)){
+            if(segundos == 1) {//avance
+                objetos[3][0].setImageResource(0);
+                objetos[3][1].setImageResource(R.drawable.passaro_avance);
+            }else if(segundos == 2) {//direita
+                objetos[3][1].setImageResource(R.drawable.passaro_inicial);
+            }else if(segundos == 3){//batida
+                this.tempo.cancel();
+                this.toque2 = MediaPlayer.create(this,R.raw.batida);
+                this.toque2.start();
+                this.toque1 = MediaPlayer.create(this,R.raw.falha);
+                this.toque1.start();
+                this.btPlay.setText("Recarregar");
+                this.btPlay.setEnabled(true);
+            }
         }
     }
+
+
 
     private void passos(int seg, int passo){
         if(seg == 1) {
@@ -293,7 +437,7 @@ public class Desafio11Activity extends AppCompatActivity {
                 objetos[0][4].setImageResource(R.drawable.passaro_inicial);
                 this.toque2 = MediaPlayer.create(this,R.raw.vitoria);
                 this.toque2.start();
-                this.btPlay.setText("Próximo");
+                this.btPlay.setText("Finalizar");
                 this.btPlay.setEnabled(true);
             }else if(passo >= 8){
                 objetos[0][4].setImageResource(R.drawable.passaro_avance);

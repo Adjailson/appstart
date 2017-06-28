@@ -123,7 +123,7 @@ public class BancoControle {
     */
     public String resetarTudo(){
         int valor = Integer.parseInt(getValorColuna(5));
-        if(valor >= 3) {
+        if(valor >= 2) {
             ContentValues valores;
             String condicao;
             db = banco.getWritableDatabase();

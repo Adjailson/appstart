@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
     public void btConteudo5(View view) {
         if(getPontos(4) >= 3) {
             startActivity(new Intent(this, Assunto5Activity.class));
-            //startActivity(new Intent(this, Desafio11Activity.class));
         }else{
             MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
         }
