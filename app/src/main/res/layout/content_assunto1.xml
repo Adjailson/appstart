@@ -157,7 +157,7 @@
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/estilo_botao"
+                android:background="@color/colorPrimaryDark"
                 android:onClick="exercicioAssunto1"
                 android:padding="10dp"
                 android:textAllCaps="false"

@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/estilo_barra"
+            android:background="@color/azulMedio"
             android:textColor="@color/colorBranco"
             android:padding="10dp"
             android:layout_marginBottom="5dp"
@@ -115,7 +115,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
                 android:textColor="@color/colorBranco"
-                android:background="@drawable/estilo_botao"
+                android:background="@color/azulMedio"
                 android:onClick="btVerificar"
                 android:text="Executar"
                 android:textAllCaps="false"/>

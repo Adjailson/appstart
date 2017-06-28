@@ -42,7 +42,7 @@
                         android:textSize="18dp"
                         android:textColor="@color/colorBranco"
                         android:text="@string/operadores_arit"
-                        android:background="@drawable/estilo_barra"
+                        android:background="@color/azulMedio"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:padding="6dip" />
@@ -143,7 +143,7 @@
                         android:textSize="18dp"
                         android:textColor="@color/colorBranco"
                         android:text="@string/operadores_logi"
-                        android:background="@drawable/estilo_barra"
+                        android:background="@color/colorPrimaryDark"
                         android:textStyle="bold"
                         android:gravity="center"
                         android:padding="6dip" />
@@ -275,7 +275,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/estilo_botao"
+                android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_marginRight="5dp"

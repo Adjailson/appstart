@@ -34,10 +34,10 @@
     <string name="sobre_condicionais">São desvios na execução do algoritmo devido a uma condição específica.\n</string>
     <string name="sobre_cond_python">Na linguagem Python usamos <b>if</b> e <b>else</b>. Exemplo: </string>
 
-    <string name="sobre_aspas">Quando usamos valores ou texto entre aspas duplas, tudo é considerado como texto ou String.\n\nExemplo em Python:</string>
+    <string name="sobre_aspas">Quando usamos valores entre aspas duplas, esses valores assumem o tipo String ou texto.\n\nExemplo em Python:</string>
     <string name="sobre_parentese">No cálculo da média colocamos os valores em parêntese para que primeiro calcule à soma e depois faz a divisão dessa soma.</string>
 
-    <string name="exemplo_strings">\"Maria\", \"1.5\", \"4\", \"Olá!\"</string>
+    <string name="exemplo_strings">\"Start\", \"2017\", \"@, _,+\"</string>
 
     <string name="soma">Soma <b>+</b></string>
     <string name="subtracao">Subtração <b>-</b></string>
