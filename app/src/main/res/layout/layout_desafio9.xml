@@ -8,6 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingBottom="30dp"
         android:layout_marginTop="0dp"
         >
         <TextView
@@ -18,17 +19,29 @@
         android:padding="10dp"
         android:layout_marginBottom="5dp"
         android:textSize="16dp"
-        android:text="3 - Complete o código até chegar ao porco malvado."/>
+        android:text="9 - Atribua um valor a variável 'passos', reutilize à mesma e programe uma condição até o pássaro atingir o porco malvado."/>
 
         <TableLayout
             android:id="@+id/table_minimundo"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/minimundo"
             android:stretchColumns="6">
         </TableLayout>
+
+        <Button
+            android:id="@+id/btDesafio8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/estilo_botao"
+            android:onClick="btVerificar"
+            android:textAllCaps="false"
+            android:text="Executar"
+            android:textColor="@color/colorBranco" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -543,25 +556,6 @@
                 android:typeface="monospace"
                 android:textColor="@color/colorPreta"
                 android:textSize="20dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="15dp">
-
-            <Button
-                android:id="@+id/btDesafio8"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-                android:background="@drawable/estilo_botao"
-                android:onClick="btVerificar"
-                android:textAllCaps="false"
-                android:text="Executar"
-                android:textColor="@color/colorBranco" />
 
         </LinearLayout>
 

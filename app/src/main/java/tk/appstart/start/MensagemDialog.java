@@ -24,8 +24,9 @@ public class MensagemDialog {
      * */
     public static void openMensagem(Context context, String titulo, String msn){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setIcon(R.drawable.passaro_inicial);
         builder.setTitle(titulo);
-        builder.setMessage(msn);
+        builder.setMessage(msn+"\n\nTenta. Você consegue!!!");
         builder.setPositiveButton("Ok", null);
         builder.setCancelable(false);
         alerta = builder.create();

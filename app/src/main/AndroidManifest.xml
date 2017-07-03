@@ -11,7 +11,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="tk.appstart.start.MainActivity"
-            android:screenOrientation="locked"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -54,45 +53,45 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name="tk.appstart.game.Desafio1Activity"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio2Activity"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio3Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio4Activity"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio5Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio6Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio7Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio8Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio9Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio10Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
         <activity
             android:name="tk.appstart.game.Desafio11Activity"
             android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="locked"></activity>
+            ></activity>
 
     </application>
 

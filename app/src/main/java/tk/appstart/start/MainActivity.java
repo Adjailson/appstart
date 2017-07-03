@@ -93,11 +93,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_config) {
-            String res = controle.resetarTudo();
-            MensagemDialog.openMensagem(this,"DB Default", res);
-
-        }else if(id == R.id.action_referencias){
+        if(id == R.id.action_referencias){
             startActivity(new Intent(this, ReferenciasActivity.class));
         }else if (id == R.id.action_sobre){
             startActivity(new Intent(this, SobreActivity.class));

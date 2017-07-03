@@ -121,9 +121,9 @@ public class Desafio11Activity extends AppCompatActivity {
                 } else {
                     objetos[linha][coluna].setImageResource(R.drawable.caixa);
                 }
-                row[linha].addView(objetos[linha][coluna], 75, 75);
+                row[linha].addView(objetos[linha][coluna], -2, -2);
             }
-            tabela.addView(row[linha], 450, 675);
+            tabela.addView(row[linha], -2, -2);
         }
         objetos[3][1].setImageResource(0);
         objetos[2][1].setImageResource(0);

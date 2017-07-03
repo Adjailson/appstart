@@ -161,9 +161,9 @@ public class Desafio5Activity extends AppCompatActivity {
                         objetos[linha][coluna].setImageResource(R.drawable.caixa);
                     }
                 }
-                row[linha].addView(objetos[linha][coluna], 75, 75);
+                row[linha].addView(objetos[linha][coluna], -2, -2);
             }
-            tabela.addView(row[linha], 450, 675);
+            tabela.addView(row[linha], -2, -2);
         }
         // Colocando os personagens nas posições da matriz
         objetos[0][1].setImageResource(0);

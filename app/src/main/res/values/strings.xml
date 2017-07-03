@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Start</string>
-    <string name="action_config">Resetar fases</string>
     <string name="action_ref">Referências</string>
     <string name="action_sobre">Sobre-nós</string>
 
