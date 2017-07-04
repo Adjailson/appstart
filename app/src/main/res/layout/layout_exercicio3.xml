@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/estilo_barra"
+            android:textColor="@color/colorBranco"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16dp"
+            android:text="3 - Qual a forma correta de declarar uma Variável?"/>
+
+
+        <RadioGroup
+            android:id="@+id/exercicio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/select_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Escrevemos o nome da variável ou uma letra para representá-la e atribuímos um valor usando o sinal de igual" />
+
+            <RadioButton
+                android:id="@+id/select_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Escrevemos o símbolo de igual e atribuímos um valor" />
+
+            <RadioButton
+                android:id="@+id/select_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Podemos utilizar qualquer símbolo ao invés de nomes ou letras para declarar variáveis" />
+
+            <RadioButton
+                android:id="@+id/select_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="É necessário escrever antes do valor que será atribuído um número que vai identificar a sua ordem de atribuição" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorBranco"
+                android:background="@drawable/estilo_botao"
+                android:onClick="btPular"
+                android:text="Próxima"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/colorBranco"
+                android:background="@drawable/estilo_botao"
+                android:onClick="btEnviar"
+                android:text="Enviar"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

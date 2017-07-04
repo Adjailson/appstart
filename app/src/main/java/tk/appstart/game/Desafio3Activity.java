@@ -1,5 +1,6 @@
 package tk.appstart.game;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -118,6 +119,7 @@ public class Desafio3Activity extends AppCompatActivity {
         }else if (txtButton.equals("Finalizar")){
             BancoControle controle = new BancoControle(this);
             controle.salvarPontuacao(2);
+            startActivity(new Intent(this,ResultadoActivity.class));
             this.finish();
         }else{
             MensagemDialog.openMensagem(this,"Atenção","Crie uma variável e faça a chamada da mesma variável" +

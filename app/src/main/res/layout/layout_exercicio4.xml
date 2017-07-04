@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/estilo_barra"
+            android:textColor="@color/colorBranco"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16dp"
+            android:text="4 - Qual a função de uma variável?"/>
+
+
+        <RadioGroup
+            android:id="@+id/exercicio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/select_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Para escrever um código bonito" />
+
+            <RadioButton
+                android:id="@+id/select_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Para armazenar valores na memória do computador" />
+
+            <RadioButton
+                android:id="@+id/select_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Para armazenar valores que nunca serão alterados" />
+
+            <RadioButton
+                android:id="@+id/select_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:text="Para identificar quantas linhas o código terá" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorBranco"
+                android:background="@drawable/estilo_botao"
+                android:onClick="btPular"
+                android:text="Próxima"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/colorBranco"
+                android:background="@drawable/estilo_botao"
+                android:onClick="btEnviar"
+                android:text="Enviar"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

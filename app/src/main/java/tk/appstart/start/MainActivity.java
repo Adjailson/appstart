@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private int getPontos(int exercicio){
-        return Integer.parseInt(controle.getValorColuna(exercicio));
-    }
-
     /**
      * Método de para chamada de uma nova janela ou Layout
      * dentro da aplicação, o método é uma chamada
@@ -49,32 +45,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, Assunto1Activity.class));
     }
     public void btConteudo2(View view){
-        if(getPontos(1) >= 4) {
-            startActivity(new Intent(this, Assunto2Activity.class));
-        }else{
-            MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
-        }
+        startActivity(new Intent(this, Assunto2Activity.class));
     }
     public void btConteudo3(View view){
-        if(getPontos(2) >= 3) {
-            startActivity(new Intent(this, Assunto3Activity.class));
-        }else{
-            MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
-        }
+        startActivity(new Intent(this, Assunto3Activity.class));
     }
     public void btConteudo4(View view){
-        if(getPontos(3) >= 3) {
-            startActivity(new Intent(this, Assunto4Activity.class));
-        }else{
-            MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
-        }
+        startActivity(new Intent(this, Assunto4Activity.class));
     }
     public void btConteudo5(View view) {
-        if(getPontos(4) >= 3) {
-            startActivity(new Intent(this, Assunto5Activity.class));
-        }else{
-            MensagemDialog.toastMensagem(this,"Sua pontuação ainda é pouca!",4,Gravity.CENTER);
-        }
+        startActivity(new Intent(this, Assunto5Activity.class));
     }
     /**
      * Os métodos abaixo são adição de opção para um menu superior

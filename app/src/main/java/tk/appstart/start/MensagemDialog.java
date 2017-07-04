@@ -5,8 +5,6 @@ import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +29,31 @@ public class MensagemDialog {
         builder.setCancelable(false);
         alerta = builder.create();
         alerta.show();
-        getButtonPersonalizado(alerta);
+        getButtonOkPersonalizado(alerta);
+    }
+
+    public static int openMensagemResponde(Context context, String titulo, String msn){
+        final int[] reposta = {0};
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setIcon(R.drawable.passaro_inicial);
+        builder.setTitle(titulo);
+        builder.setMessage(msn+"\n\nTenta. Você consegue!!!\n");
+        builder.setNeutralButton("Tentar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int valor) {
+                reposta[0] = 1;
+            }
+        });
+        builder.setPositiveButton("Depois", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int valor) {
+                reposta[0] = 0;
+            }
+        });
+        builder.setCancelable(false);
+        alerta = builder.create();
+        alerta.show();
+        getButtonOkPersonalizado(alerta);
+        getButtonNeutroPersonalizado(alerta);
+        return reposta[0];
     }
     /**
      * Método retorna uma mensagem do tipo Toast personalizada:
@@ -53,6 +75,7 @@ public class MensagemDialog {
     /**
      * Método para abrir layout dentro AlertDialog:
      * */
+    /*
     public static void openLayoutDialog(Context context, String titulo, int layout){
         LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE);
         View alertLayout = inflater.inflate(layout, null);
@@ -64,16 +87,28 @@ public class MensagemDialog {
         alerta.show();
         getButtonPersonalizado(alerta);
     }
+    */
+
+
     /**
      * Método retorna um Button personalizado:
      * */
-    private static Button getButtonPersonalizado(AlertDialog dialog){
+    private static Button getButtonOkPersonalizado(AlertDialog dialog){
         Button objetoBotao = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         objetoBotao.setBackgroundResource(R.drawable.estilo_botao);
         objetoBotao.setAllCaps(false);
         objetoBotao.setTextColor(Color.WHITE);
         return objetoBotao;
     }
+
+    private static Button getButtonNeutroPersonalizado(AlertDialog dialog){
+        Button objetoBotao = dialog.getButton(DialogInterface.BUTTON_NEUTRAL);
+        objetoBotao.setBackgroundResource(R.drawable.estilo_botao);
+        objetoBotao.setAllCaps(false);
+        objetoBotao.setTextColor(Color.WHITE);
+        return objetoBotao;
+    }
+
     /**
      * Método retorna um TextView personalizada:
      * */

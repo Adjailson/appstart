@@ -1,5 +1,6 @@
 package tk.appstart.game;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -178,6 +179,7 @@ public class Desafio11Activity extends AppCompatActivity {
         } else if (txtBotao.equals("Finalizar")) {
             BancoControle controle = new BancoControle(this);
             controle.salvarPontuacao(5);
+            startActivity(new Intent(this,ResultadoActivity.class));
             this.finish();
         }
     }

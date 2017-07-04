@@ -92,6 +92,20 @@
             android:name="tk.appstart.game.Desafio11Activity"
             android:windowSoftInputMode="stateHidden"
             ></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio1Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio2Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio3Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio4Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio5Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.Exercicio6Activity"></activity>
+        <activity
+            android:name="tk.appstart.game.ResultadoActivity"></activity>
 
     </application>
 
